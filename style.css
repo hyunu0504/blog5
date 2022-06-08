@@ -1,0 +1,59 @@
+body {
+  margin: 0; /* 여백 제거 */
+  background-color: rgba(0, 0, 0, 0.855); /* 배경 */
+  overflow: hidden; /* 드래그바 삭제 */
+}
+.snow {
+  background-color: white; /* 배경 */
+  border-radius: 50%; /* 테두리 둥글게 */
+  width: 8px; /* 가로 */
+  height: 8px; /* 세로 */
+  animation-name: sn; /* 키프레임 id */
+  animation-duration: 5s; /* n초에 걸쳐서 실행 */
+  animation-iteration-count: infinite; /* 실행이 끝나면 다시 실행 */
+  animation-timing-function: linear; /* 일정한 속도로 실행 */
+  opacity: 0; /* 투명도 */
+}
+.snow:nth-child(2n) {
+  /* snow라는 class의 2의 배수만 선택 */
+  width: 7px; /* 가로 */
+  height: 7px; /* 세로 */
+  animation-duration: 5s;
+  animation-delay: 1s; /* n초후에 실행 */
+}
+.snow:nth-child(3n) {
+  /* snow라는 class의 3의 배수만 선택 */
+  width: 6px; /* 가로 */
+  height: 6px; /* 세로 */
+  animation-duration: 6s; /* n초에 걸쳐서 실행 */
+  animation-delay: 2s; /* n초후에 실행 */
+}
+.snow:nth-child(5n) {
+  /* snow라는 class의 5의 배수만 선택 */
+  width: 5px; /* 가로 */
+  height: 5px; /* 세로 */
+  animation-duration: 7s;
+  animation-delay: 3s;
+}
+.snow:nth-child(7n) {
+  /* snow라는 class의 7의 배수만 선택 */
+  width: 4px; /* 가로 */
+  height: 4px; /* 세로 */
+  animation-duration: 8s; /* n초에 걸쳐서 실행 */
+  animation-delay: 4s; /* n초후에 실행 */
+}
+@keyframes sn {
+  50% {
+    /* 0%에서 50%가 될때까지 실행할 코드 */
+    transform: translateY(50vh); /* y축 50vh만큼 이동 */
+    opacity: 0.6; /* y축 50vh만큼 이동 */
+  }
+  75% {
+    /* 50%에서 75%가 될때까지 실행할 코드 */
+    opacity: 0; /* 투명도 0 */
+  }
+  100% {
+    /* 75%에서 100%가 될때까지 실행할 코드 */
+    transform: translateY(100vh); /* y축 100vh만큼 이동 */
+  }
+}
