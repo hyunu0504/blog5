@@ -8,6 +8,6 @@ function randomSnow(){
     return Math.floor( Math.random() * window.innerWidth ) // Math.randomn으로 무작위 값이 window 창의 가로크기 안에서의 값만
     //    Math.fllor로  그 값의 소수값은 받지않음
 }
-for( i = 0; i < 10; i++ ){ 
-    addSnow(); //1000번이 실행되는 for문
+for( i = 0; i < 200; i++ ){ 
+    addSnow(); //200번이 실행되는 for문
 }
